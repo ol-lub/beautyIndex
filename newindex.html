@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Проект</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="jquery-3.3.1.slim.min.js"></script>
+	<script type="text/javascript" src="bootstrap.min.js"></script>
+	<script async type="text/javascript" src="js.js"></script>
+</head>
+<body>
+	<header>
+		<div class="top_line">
+		<div class="head">
+			<div><p class="bold">Идеал</p>
+				<ul class="menu">
+					<li><a href="">Начать</a></li>
+					<li><a href="">Инструкция</a></li>
+					<li><a href="">О сайте</a></li>
+				</ul>
+			</div>
+		</div>
+		</div>
+		<div class="welcom">
+			<p class="welc1">Добро пожаловать!</p>
+			<p >На этом сайте вы сможете проверить,<br> на сколько ваше лицо соответствует идеалу.</p>
+		</div>
+	</header>
+	<div id="show" class="show"></div>
+    <div id="show1" class="show"></div>
+    <div id="show3" class="show1"></div>
+    <div id="show4" class="show1"></div>
+     <div class="container">
+     	<h1 class="top_start">Начать</h1>
+    <div class="row vbr">
+        <p class="pd_vbr">Выберите фото: </p>
+        <input type="file" id="file" name="file" />
+    </div>
+    <div class="row" id = "photo">
+        <span id="output"></span>
+    </div>
+    </div>
+    <div class = "x1" id = "x1"></div>
+
+    <div class="instr">
+    	<h1>Инструкция</h1>
+    	<div class="pd_instr">
+    	<p>Порядок работы:</p>
+    	<ol>
+    		<li>Нажмите на кнопку "Выберите файл" и выберите фото.</li>
+    		<li>Расставьте точки по списку, приведенному ниже. Первые - красные, вторые - синие.</li>
+    		<li>Получите результат (чем ближе результат к 0, тем ваши пропорци ближе к идеальным).</li>
+    		<li>Средний показатель индекса - 0.4.</li>
+    	</ol>
+    	<p>Порядок расположения точек:</p>
+    	<ul>
+    		<li>Высота лица(синие) / ширина лица(красные);</li>
+    		<li>Центральная точка соединения губ до основания носа(синие) / длина носа(красные);</li>
+    		<li>Высота лица(синие) / расстояние от кончика подбородка до центральной точки соединения губ(красные);</li>
+    		<li>Ширина рта(синие) / ширина носа(красные);</li>
+    		<li>Ширина носа(синие) / расстояние между ноздрями(красные);</li>
+    		<li>Расстояние между зрачками(синие) / расстояние между бровями(красные).</li>
+    	</ul>
+        </div>
+    </div>
+<script>
+function handleFileSelect(evt) {
+    var file = evt.target.files; 
+    var f = file[0];
+    if (!f.type.match('image.*')) {
+        alert("Пожалуйста, выберите фото...");
+    }
+    var reader = new FileReader();
+    reader.onload = (function(theFile) {
+        return function(e) {
+            var span = document.createElement('span');
+            span.innerHTML = ['<img class="thumb" id="photo" title="', escape(theFile.name), '" src="', e.target.result, '" />'].join('');
+            document.getElementById('output').insertBefore(span, null);
+        };
+    })(f);
+    reader.readAsDataURL(f);
+}
+document.getElementById('file').addEventListener('change', handleFileSelect, false);
+</script>
+</body>
+</html>

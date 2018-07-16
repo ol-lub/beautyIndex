@@ -1,0 +1,135 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: pink;
+}
+header {
+	background-image: url(head_bg.jpg);
+	background-repeat: repeat-x;
+	background-position: top center;
+	min-height: 601px;
+	position: relative;
+}
+header .top_line {
+	height: 70px;
+	background-color: rgba(0, 0, 0, .6);
+	position: relative;
+}
+
+.head {
+	margin-left: 100px;
+	padding-left: 110px;
+    padding-top: 15px;
+    background-image: url(logo.png);
+    background-repeat: no-repeat;
+    background-position: center left;
+    height: 110px;
+}
+.head .bold {
+	float: left;
+	font-weight: bold;
+	color: #75add8;
+	font-size: 30pt;
+	text-shadow: 1px 1px 4px #1c0d5a;
+}
+
+.menu {
+	margin-left: 550px;
+}
+
+.menu li {
+	display: inline-block;
+	padding-right: 40px;
+	margin-top: 10px;
+	font-size: 14pt;
+}
+
+.menu a {
+	color: #75add8;
+}
+
+.welcom {
+	margin-top: 130px;
+	margin-left: 90px;
+	font-size: 20pt;
+	color: #000e43;
+
+}
+
+.welc1 {
+	margin-top: 10px;
+	margin-left: 10px;
+	font-size: 40pt;
+	text-shadow: 1px 1px 10px #3b375c;
+	font-weight: bold;
+}
+
+.vbr {
+	margin-left: 360px;
+	font-weight: bold;
+}
+.pd_vbr {
+	margin-right: 10px;
+}
+
+.top_start {
+	text-align: center;
+	color: #000e43;
+}
+
+.pd_instr {
+	margin-left: 90px;
+}
+
+.instr p {
+	font-weight: bold;
+}
+
+.instr h1 {
+	text-align: center;
+	color: #000e43;
+}
+
+.show {
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+.show1 {
+    width: 10px;
+    height: 10px;
+    background: blue;
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+
+.thumb {
+	width: 500px;
+    height: 650px;
+    margin-left: 340px;
+}
+
+.x1 {
+	width: 320px;
+	height: 65px;
+	margin-left: 530px;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	text-align: center;
+	padding-top: 20px;
+	background: #5860cc;
+	outline: 2px solid #0f1677;
+	color: pink;
+	box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
+	font-weight: bold;
+	text-shadow: 1px 1px 4px #ec478c;
+	display: none;
+}
